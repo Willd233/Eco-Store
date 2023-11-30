@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  width: auto;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  color: #7C6A0A;
+  padding: 15px;
+}
+nav p {
+  font-size: 1.5rem;
+  padding-left: 30px;
+  color: #7C6A0A;
+}
+nav .icons {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-column: 2/2;
+  gap: 15px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+
+article {
+  color: #7C6A0A;
+  width: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 60px;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+article .impact-section {
+  width: 50%;
+}
+article .image-section {
+  width: 100%;
+  text-align: right;
+  justify-content: flex-end;
+}
+article .image-section img {
+  width: 55%;
+  border-radius: 19px;
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: #FA9500;
+}/*# sourceMappingURL=main.css.map */
