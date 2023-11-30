@@ -35,13 +35,30 @@ article {
   width: auto;
   padding-left: 45px;
   padding-right: 45px;
-  padding-top: 60px;
-  background: white;
+  padding-top: 25px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+article h1 {
+  font-size: 3rem;
+}
+article p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+article button {
+  background-color: #FA9500;
+  border-style: none;
+  width: 12vw;
+  padding: 20px;
+  border-radius: 35px;
+  color: white;
+  font-size: 1rem;
 }
 article .impact-section {
-  width: 50%;
+  width: 100%;
 }
 article .image-section {
   width: 100%;
@@ -49,7 +66,7 @@ article .image-section {
   justify-content: flex-end;
 }
 article .image-section img {
-  width: 55%;
+  width: 52%;
   border-radius: 19px;
 }
 
