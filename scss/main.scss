@@ -7,91 +7,165 @@ $font-stack: 'IBM Plex Sans', sans-serif;
 $paragraph-size: 1.5rem;
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: $primary-color;
-    font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $primary-color;
+  font-family: $font-stack;
 }
 
 nav {
-    width: auto;
-    height: 100px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  width: auto;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  color: $primary-text-color;
+  padding: 15px;
+
+  p {
+    font-size: $paragraph-size;
+    padding-left: 30px;
     color: $primary-text-color;
-    padding: 15px;
+  }
 
-    p {
-        font-size: $paragraph-size;
-        padding-left: 30px;
-        color: $primary-text-color;
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-column: 2/2;
+    gap: 15px;
+
+    button {
+      background: none;
+      border-style: none;
     }
-
-    .icons {
-        display: grid;
-        grid-template-columns: repeat(3, 50px);
-        grid-column: 2/2;
-        gap: 15px;
-
-        button {
-            background: none;
-            border-style: none;
-        }
-    }
+  }
 }
 
 article {
-    color: $primary-text-color;
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+  color: $primary-text-color;
+  width: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 
 
-    h1{
-        font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 
-    p{
-        font-size: $paragraph-size;
-        line-height: 1.5;
-        margin-bottom: 40px;
+  p {
+    font-size: $paragraph-size;
+    line-height: 1.5;
+    margin-bottom: 40px;
 
-    }
-      button {
-        background-color: $quarternary-color ;
-        border-style: none;
-        width: 12vw;
-        padding: 20px;
-        border-radius: 35px;
-        color: white;
-        font-size: 1rem;
-    }
-   
-    .impact-section {
-      width: 100%;
-    }
-  
-    .image-section {
-      width: 100%;
-      text-align: right;
-      justify-content: flex-end;
+  }
 
-  
-      img {
-        width: 52%;
-        border-radius: 19px;
-      }
+  button {
+    background-color: $quarternary-color ;
+    border-style: none;
+    width: 12vw;
+    padding: 20px;
+    border-radius: 35px;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .impact-section {
+    width: 100%;
+  }
+
+  .image-section {
+    width: 100%;
+    text-align: right;
+    justify-content: flex-end;
+
+
+    img {
+      width: 52%;
+      border-radius: 19px;
     }
   }
-  
+}
+
+section {
+  height: auto;
+  padding: 60px;
+
+  h2 {
+    color: $primary-text-color;
+    font-size: 2rem;
+  }
+
+  .healthcare {
+    margin-bottom: 90px;
+
+    h2 {
+      font-weight: 300;
+      padding-bottom: 60px;
+    }
+
+    .card-section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      box-sizing: border-box;
+      justify-items: center;
+      row-gap: 100px;
+    }
+
+    .product-card {
+      width: 13vw;
+      height: 45vh;
+      background-color: $secundary-color;
+      display: grid;
+      color: $primary-text-color;
+      padding: 20px;
+      border-radius: 10px;
+
+      .icon {
+        grid-column: 1 / 2;
+        grid-row: 1;
+        justify-self: end;
+      }
+
+      .production-image {
+        display: grid;
+        justify-content: center;
+      }
+
+      img {
+        width: 200px;
+        height: 280px;
+        background-image: cover;
+        border-radius: 6px;
+      }
+
+      h3 {
+        margin: 8px;
+      }
+
+      p {
+        margin: 8px;
+      }
+    }
+
+
+
+  }
+
+  .furniture {
+    @extend .healthcare;
+    .product-card{
+      background-color: $tertiary-color;
+      color: white;
+    }
+  }
+}
 
 footer {
-    width: 100%;
-    height: 250px;
-    background-color: $quarternary-color;
+  width: 100%;
+  height: 250px;
+  background-color: $quarternary-color;
 }
