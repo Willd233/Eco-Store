@@ -93,7 +93,7 @@ section .healthcare .card-section, section .furniture .card-section {
   row-gap: 100px;
 }
 section .healthcare .product-card, section .furniture .product-card {
-  width: 13vw;
+  width: 11vw;
   height: 45vh;
   background-color: #FFDAC6;
   display: grid;
@@ -106,12 +106,17 @@ section .healthcare .product-card .icon, section .furniture .product-card .icon 
   grid-row: 1;
   justify-self: end;
 }
+section .healthcare .product-card .icon path, section .furniture .product-card .icon path {
+  stroke: #7C6A0A;
+}
+section .healthcare .product-card .icon:hover path, section .furniture .product-card .icon:hover path {
+  stroke: red;
+}
 section .healthcare .product-card .production-image, section .furniture .product-card .production-image {
   display: grid;
-  justify-content: center;
 }
 section .healthcare .product-card img, section .furniture .product-card img {
-  width: 200px;
+  width: 100%;
   height: 280px;
   background-image: cover;
   border-radius: 6px;
@@ -126,7 +131,41 @@ section .furniture .product-card {
   background-color: #BABD8D;
   color: white;
 }
+section .furniture .product-card .icon path {
+  stroke: white;
+}
 
+.about-us h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.about-us .mision-section {
+  height: 250px;
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  justify-content: center;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+}
+.about-us .mision-section .earth, .about-us .mision-section .innovation {
+  width: 28vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: end;
+}
+.about-us .mision-section img {
+  grid-column: 1;
+  width: 90%;
+  margin-right: 20px;
+}
+.about-us .mision-section p {
+  grid-column: 2;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #E86424;
+  font-weight: 500;
+}
 footer {
   width: 100%;
   height: 250px;
