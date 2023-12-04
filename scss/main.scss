@@ -80,6 +80,10 @@ article {
     border-radius: 35px;
     color: white;
     font-size: 1rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .impact-section {
@@ -142,11 +146,11 @@ section {
           stroke: $primary-text-color;
         }
 
+        &:hover path {
+          stroke: red;
+        }
       }
 
-      .icon:hover path {
-        stroke: red;
-      }
 
 
       .production-image {
@@ -208,13 +212,13 @@ section {
       align-items: center;
       justify-items: end;
     }
-    
+
     img {
       grid-column: 1;
       width: 90%;
       margin-right: 20px;
     }
-    
+
     p {
       grid-column: 2;
       text-align: center;
@@ -223,7 +227,7 @@ section {
       font-weight: 500;
 
     }
-    
+
 
     .innovation {
       @extend .earth
@@ -231,8 +235,62 @@ section {
   }
 }
 
+.gallery {
+  h2 {
+    font-weight: bold;
+    padding-bottom: 60px;
+  }
+
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28vw, 1fr));
+    justify-items: center;
+    margin-bottom: 70px;
+
+    img {
+      width: 28vw;
+      height: 45vh;
+      object-fit: cover;
+      object-position: 5px 35%;
+      border-radius: 19px;
+      margin-right: 20px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.location {
+  color: #E86424;
+  font-size: $paragraph-size;
+
+  h2 {
+    font-weight: bold;
+    padding-bottom: 60px;
+  }
+
+  .map {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
+
+
 footer {
   width: 100%;
-  height: 250px;
+  height: auto;
+  padding: 40px;
+  color: white;
   background-color: $quarternary-color;
+
+  .social-media {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    justify-items: center;
+    justify-content: center;
+
+  }
 }
